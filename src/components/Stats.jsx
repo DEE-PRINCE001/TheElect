@@ -3,22 +3,43 @@ import StatCard from './StatCard'
 
 const Stats = () => {
   return (
-    <div className="flex justify-between items-center h-117 w-full px-8 py-[96px] bg-[#F3F3F9] space-x-5">
-        <div className='w-[50%] h-[286px] bg-primary flex flex-col p-10 rounded-3xl justify-between'>
-            <div className='text-[40px] font-bold font-manrope-700 text-white'>
-                Precision at Scale
-            </div>
-            <p className='text-[20px] leading-6 font-normal text-[#A9C7FF]'>Delivering excellence across diverse technological <br/>
-landscapes for a decade.
+    <section className="w-full bg-[#F3F3F9] py-16 md:py-24 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 items-stretch">
+        {/* Main Stat Banner */}
+        <div className="w-full lg:w-1/2 bg-primary flex flex-col justify-between p-8 sm:p-10 rounded-3xl min-h-[280px] shadow-lg text-white">
+          <div className="space-y-3">
+            <h2 className="text-3xl sm:text-4xl font-bold">
+              Precision at Scale
+            </h2>
+            <p className="text-base sm:text-lg font-normal text-[#A9C7FF]">
+              Delivering excellence across diverse technological landscapes for a decade.
             </p>
-            <div className='flex space-x-3 mt-4 items-end'>
-                <div className='text-[60px] font-extrabold text-white leading-none'>10K+</div>
-                <div className='text-[24px] font-normal text-[#A9C7FF]'>Succesful Projects</div>
-            </div>
+          </div>
+          <div className="flex flex-wrap items-baseline gap-3 mt-6">
+            <span className="text-5xl sm:text-6xl font-extrabold leading-none">10K+</span>
+            <span className="text-lg sm:text-xl font-medium text-[#A9C7FF]">Successful Projects</span>
+          </div>
         </div>
-        <StatCard value={"99%"} label={"UPTIME RATE"} bcolor={"bg-white"} vcolor={"text-secondary"} lcolor={"text-[#424750]"}/>
-        <StatCard value="24/7" label="SUPPORT RESPONSE"  vcolor={"text-[#642F00]"} lcolor={"text-[#642F00]"}/>
-    </div>
+
+        {/* Side Stat Cards */}
+        <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <StatCard
+            value="99%"
+            label="UPTIME RATE"
+            bcolor="bg-white"
+            vcolor="text-secondary"
+            lcolor="text-[#424750]"
+          />
+          <StatCard
+            value="24/7"
+            label="SUPPORT RESPONSE"
+            bcolor="bg-container"
+            vcolor="text-white"
+            lcolor="text-white/90"
+          />
+        </div>
+      </div>
+    </section>
   )
 }
 
